@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Weather Application</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div align="center">
+    <h1>Check Today's Weather</h1>
+    <form action="#" th:action="@{/show}" method="post" th:object="${city}">
+
+        <label>Enter City Name :</label>
+        <input type="text" th:field="*{city}" /><br/>
+        <button type="submit">Check!</button>
+
+    </form>
+</div>
+
+<div align="center">
+    <h2>Below are the weather details:</h2>
+    <span>Full name:</span><span th:text="${weatherDetail.base}"></span><br/>
+    <span>E-mail:</span><span th:text="${user.email}"></span><br/>
+    <span>Password:</span><span th:text="${user.password}"></span><br/>
+    <span>Gender:</span><span th:text="${user.gender}"></span><br/>
+    <span>Profession:</span><span th:text="${user.profession}"></span><br/>
+    <span>Married?</span><span th:text="${user.married}"></span><br/>
+    <span>Note:</span><span th:text="${user.note}"></span><br/>
+</div>
+
+</body>
+</html>
